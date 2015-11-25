@@ -10,9 +10,11 @@
 
 @interface ProfileView : UIView
 
+@property (weak, nonatomic) IBOutlet UIView *profileContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
 @property (weak, nonatomic) IBOutlet UIView *tabContainerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabContainerViewBottomConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *profileContainerTopConstraint;
 
 
 + (ProfileView *)profileView;

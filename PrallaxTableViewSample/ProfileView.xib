@@ -18,7 +18,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="315" id="bSQ-oO-Yj8"/>
-                                <constraint firstAttribute="width" constant="375" id="j4e-iv-wss"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVD-cf-a0g">
@@ -35,7 +34,6 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="8Oh-YM-aKz" secondAttribute="trailing" id="IKD-AL-urf"/>
                         <constraint firstAttribute="height" constant="315" id="VHZ-mG-zEh"/>
-                        <constraint firstAttribute="width" constant="375" id="cQ4-Yg-cUz"/>
                         <constraint firstItem="8Oh-YM-aKz" firstAttribute="top" secondItem="sth-s5-rLd" secondAttribute="top" id="o4c-V7-n4E"/>
                         <constraint firstItem="8Oh-YM-aKz" firstAttribute="leading" secondItem="sth-s5-rLd" secondAttribute="leading" id="rvq-zc-9pN"/>
                         <constraint firstAttribute="bottom" secondItem="8Oh-YM-aKz" secondAttribute="bottom" id="xi9-6S-Bn4"/>
@@ -60,6 +58,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="coverImageView" destination="8Oh-YM-aKz" id="QGp-9K-IC1"/>
+                <outlet property="profileContainerTopConstraint" destination="859-2Y-vG6" id="qLC-zd-vpb"/>
+                <outlet property="profileContainerView" destination="sth-s5-rLd" id="epf-eK-jsZ"/>
                 <outlet property="tabContainerView" destination="Euq-Df-bML" id="mCd-R9-3PR"/>
                 <outlet property="tabContainerViewBottomConstraint" destination="kjO-qI-LJp" id="Ngm-fS-FBr"/>
             </connections>

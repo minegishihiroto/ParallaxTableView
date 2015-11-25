@@ -80,6 +80,10 @@
     [self.delegate profileTableViewController:self scrollViewDidScroll:scrollView];
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.delegate profileTableViewController:self scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+}
+
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self.delegate profileTableViewController:self scrollViewDidEndDecelerating:scrollView];
 }
