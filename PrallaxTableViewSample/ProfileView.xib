@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-s5-rLd">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="KvjW03.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8Oh-YM-aKz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="315" id="bSQ-oO-Yj8"/>
+                                <constraint firstAttribute="width" constant="375" id="j4e-iv-wss"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVD-cf-a0g">
+                            <rect key="frame" x="142" y="243" width="90" height="30"/>
+                            <state key="normal" title="フォローする">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="didTapFollowButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="QLB-OT-U3a"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8Oh-YM-aKz" secondAttribute="trailing" id="IKD-AL-urf"/>
+                        <constraint firstAttribute="height" constant="315" id="VHZ-mG-zEh"/>
+                        <constraint firstAttribute="width" constant="375" id="cQ4-Yg-cUz"/>
+                        <constraint firstItem="8Oh-YM-aKz" firstAttribute="top" secondItem="sth-s5-rLd" secondAttribute="top" id="o4c-V7-n4E"/>
+                        <constraint firstItem="8Oh-YM-aKz" firstAttribute="leading" secondItem="sth-s5-rLd" secondAttribute="leading" id="rvq-zc-9pN"/>
+                        <constraint firstAttribute="bottom" secondItem="8Oh-YM-aKz" secondAttribute="bottom" id="xi9-6S-Bn4"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-Df-bML">
+                    <rect key="frame" x="0.0" y="315" width="375" height="62"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="62" id="n6M-6v-d8Y"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Euq-Df-bML" secondAttribute="trailing" id="25B-hb-GPw"/>
+                <constraint firstItem="Euq-Df-bML" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3eC-ia-bmj"/>
+                <constraint firstItem="sth-s5-rLd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="859-2Y-vG6"/>
+                <constraint firstItem="sth-s5-rLd" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JkO-eu-PaQ"/>
+                <constraint firstAttribute="trailing" secondItem="sth-s5-rLd" secondAttribute="trailing" id="Yh5-Qo-rSA"/>
+                <constraint firstAttribute="bottom" secondItem="Euq-Df-bML" secondAttribute="bottom" id="kjO-qI-LJp"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="coverImageView" destination="8Oh-YM-aKz" id="QGp-9K-IC1"/>
+                <outlet property="tabContainerView" destination="Euq-Df-bML" id="mCd-R9-3PR"/>
+                <outlet property="tabContainerViewBottomConstraint" destination="kjO-qI-LJp" id="Ngm-fS-FBr"/>
+            </connections>
+            <point key="canvasLocation" x="163.5" y="354.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="KvjW03.jpg" width="3840" height="2160"/>
+    </resources>
+</document>

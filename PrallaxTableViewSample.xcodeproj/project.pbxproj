@@ -1,0 +1,653 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		947985711C049B740053A7BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985701C049B740053A7BB /* main.m */; };
+		947985741C049B740053A7BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985731C049B740053A7BB /* AppDelegate.m */; };
+		9479858A1C049B740053A7BB /* PrallaxTableViewSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985891C049B740053A7BB /* PrallaxTableViewSampleTests.m */; };
+		947985951C049B740053A7BB /* PrallaxTableViewSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985941C049B740053A7BB /* PrallaxTableViewSampleUITests.m */; };
+		947985AA1C049CE10053A7BB /* SlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985A81C049CE10053A7BB /* SlideViewController.m */; };
+		947985AB1C049CE10053A7BB /* SlideViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947985A91C049CE10053A7BB /* SlideViewController.xib */; };
+		947985B51C049E0B0053A7BB /* FriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985B31C049E0B0053A7BB /* FriendTableViewCell.m */; };
+		947985B61C049E0B0053A7BB /* FriendTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947985B41C049E0B0053A7BB /* FriendTableViewCell.xib */; };
+		947985BA1C04A2240053A7BB /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985B81C04A2240053A7BB /* ProfileTableViewController.m */; };
+		947985BB1C04A2240053A7BB /* ProfileTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947985B91C04A2240053A7BB /* ProfileTableViewController.xib */; };
+		947985D51C04A2E70053A7BB /* loved.png in Resources */ = {isa = PBXBuildFile; fileRef = 947985BD1C04A2E70053A7BB /* loved.png */; };
+		947985D61C04A2E70053A7BB /* man1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985BE1C04A2E70053A7BB /* man1.jpg */; };
+		947985D71C04A2E70053A7BB /* man2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985BF1C04A2E70053A7BB /* man2.jpg */; };
+		947985D81C04A2E70053A7BB /* man3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C01C04A2E70053A7BB /* man3.jpg */; };
+		947985D91C04A2E70053A7BB /* man4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C11C04A2E70053A7BB /* man4.jpg */; };
+		947985DA1C04A2E70053A7BB /* man5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C21C04A2E70053A7BB /* man5.jpg */; };
+		947985DB1C04A2E70053A7BB /* man6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C31C04A2E70053A7BB /* man6.jpg */; };
+		947985DC1C04A2E70053A7BB /* man7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C41C04A2E70053A7BB /* man7.jpg */; };
+		947985DD1C04A2E70053A7BB /* man8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C51C04A2E70053A7BB /* man8.jpg */; };
+		947985DE1C04A2E70053A7BB /* mood1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C61C04A2E70053A7BB /* mood1.jpg */; };
+		947985DF1C04A2E70053A7BB /* mood2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C71C04A2E70053A7BB /* mood2.jpg */; };
+		947985E01C04A2E70053A7BB /* mood3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C81C04A2E70053A7BB /* mood3.jpg */; };
+		947985E11C04A2E70053A7BB /* mood4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985C91C04A2E70053A7BB /* mood4.jpg */; };
+		947985E21C04A2E70053A7BB /* mood5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985CA1C04A2E70053A7BB /* mood5.jpg */; };
+		947985E31C04A2E70053A7BB /* mood6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985CB1C04A2E70053A7BB /* mood6.jpg */; };
+		947985E41C04A2E70053A7BB /* mood7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985CC1C04A2E70053A7BB /* mood7.jpg */; };
+		947985E51C04A2E70053A7BB /* mood8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985CD1C04A2E70053A7BB /* mood8.jpg */; };
+		947985E61C04A2E70053A7BB /* playful.png in Resources */ = {isa = PBXBuildFile; fileRef = 947985CE1C04A2E70053A7BB /* playful.png */; };
+		947985E71C04A2E70053A7BB /* relax.png in Resources */ = {isa = PBXBuildFile; fileRef = 947985CF1C04A2E70053A7BB /* relax.png */; };
+		947985E81C04A2E70053A7BB /* woman1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985D01C04A2E70053A7BB /* woman1.jpg */; };
+		947985E91C04A2E70053A7BB /* woman2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985D11C04A2E70053A7BB /* woman2.jpg */; };
+		947985EA1C04A2E70053A7BB /* woman3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985D21C04A2E70053A7BB /* woman3.jpg */; };
+		947985EB1C04A2E70053A7BB /* woman4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985D31C04A2E70053A7BB /* woman4.jpg */; };
+		947985EC1C04A2E70053A7BB /* woman5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985D41C04A2E70053A7BB /* woman5.jpg */; };
+		947985EF1C04B5DA0053A7BB /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985EE1C04B5DA0053A7BB /* ProfileView.m */; };
+		947985F11C04B5F30053A7BB /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947985F01C04B5F30053A7BB /* ProfileView.xib */; };
+		947985F51C04C37F0053A7BB /* ProfileViewContainerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 947985F31C04C37F0053A7BB /* ProfileViewContainerTableViewCell.m */; };
+		947985F61C04C37F0053A7BB /* ProfileViewContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 947985F41C04C37F0053A7BB /* ProfileViewContainerTableViewCell.xib */; };
+		947985F81C0589A00053A7BB /* KvjW03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 947985F71C0589A00053A7BB /* KvjW03.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		947985861C049B740053A7BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947985641C049B740053A7BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9479856B1C049B740053A7BB;
+			remoteInfo = PrallaxTableViewSample;
+		};
+		947985911C049B740053A7BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 947985641C049B740053A7BB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9479856B1C049B740053A7BB;
+			remoteInfo = PrallaxTableViewSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9479856C1C049B740053A7BB /* PrallaxTableViewSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrallaxTableViewSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		947985701C049B740053A7BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		947985721C049B740053A7BB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		947985731C049B740053A7BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		947985801C049B740053A7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947985851C049B740053A7BB /* PrallaxTableViewSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrallaxTableViewSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		947985891C049B740053A7BB /* PrallaxTableViewSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrallaxTableViewSampleTests.m; sourceTree = "<group>"; };
+		9479858B1C049B740053A7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947985901C049B740053A7BB /* PrallaxTableViewSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrallaxTableViewSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		947985941C049B740053A7BB /* PrallaxTableViewSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrallaxTableViewSampleUITests.m; sourceTree = "<group>"; };
+		947985961C049B740053A7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		947985A71C049CE10053A7BB /* SlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideViewController.h; sourceTree = "<group>"; };
+		947985A81C049CE10053A7BB /* SlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideViewController.m; sourceTree = "<group>"; };
+		947985A91C049CE10053A7BB /* SlideViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideViewController.xib; sourceTree = "<group>"; };
+		947985B21C049E0B0053A7BB /* FriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendTableViewCell.h; sourceTree = "<group>"; };
+		947985B31C049E0B0053A7BB /* FriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendTableViewCell.m; sourceTree = "<group>"; };
+		947985B41C049E0B0053A7BB /* FriendTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendTableViewCell.xib; sourceTree = "<group>"; };
+		947985B71C04A2240053A7BB /* ProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		947985B81C04A2240053A7BB /* ProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		947985B91C04A2240053A7BB /* ProfileTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewController.xib; sourceTree = "<group>"; };
+		947985BD1C04A2E70053A7BB /* loved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loved.png; sourceTree = "<group>"; };
+		947985BE1C04A2E70053A7BB /* man1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man1.jpg; sourceTree = "<group>"; };
+		947985BF1C04A2E70053A7BB /* man2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man2.jpg; sourceTree = "<group>"; };
+		947985C01C04A2E70053A7BB /* man3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man3.jpg; sourceTree = "<group>"; };
+		947985C11C04A2E70053A7BB /* man4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man4.jpg; sourceTree = "<group>"; };
+		947985C21C04A2E70053A7BB /* man5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man5.jpg; sourceTree = "<group>"; };
+		947985C31C04A2E70053A7BB /* man6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man6.jpg; sourceTree = "<group>"; };
+		947985C41C04A2E70053A7BB /* man7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man7.jpg; sourceTree = "<group>"; };
+		947985C51C04A2E70053A7BB /* man8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man8.jpg; sourceTree = "<group>"; };
+		947985C61C04A2E70053A7BB /* mood1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood1.jpg; sourceTree = "<group>"; };
+		947985C71C04A2E70053A7BB /* mood2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood2.jpg; sourceTree = "<group>"; };
+		947985C81C04A2E70053A7BB /* mood3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood3.jpg; sourceTree = "<group>"; };
+		947985C91C04A2E70053A7BB /* mood4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood4.jpg; sourceTree = "<group>"; };
+		947985CA1C04A2E70053A7BB /* mood5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood5.jpg; sourceTree = "<group>"; };
+		947985CB1C04A2E70053A7BB /* mood6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood6.jpg; sourceTree = "<group>"; };
+		947985CC1C04A2E70053A7BB /* mood7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood7.jpg; sourceTree = "<group>"; };
+		947985CD1C04A2E70053A7BB /* mood8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mood8.jpg; sourceTree = "<group>"; };
+		947985CE1C04A2E70053A7BB /* playful.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playful.png; sourceTree = "<group>"; };
+		947985CF1C04A2E70053A7BB /* relax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = relax.png; sourceTree = "<group>"; };
+		947985D01C04A2E70053A7BB /* woman1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woman1.jpg; sourceTree = "<group>"; };
+		947985D11C04A2E70053A7BB /* woman2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woman2.jpg; sourceTree = "<group>"; };
+		947985D21C04A2E70053A7BB /* woman3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woman3.jpg; sourceTree = "<group>"; };
+		947985D31C04A2E70053A7BB /* woman4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woman4.jpg; sourceTree = "<group>"; };
+		947985D41C04A2E70053A7BB /* woman5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woman5.jpg; sourceTree = "<group>"; };
+		947985ED1C04B5DA0053A7BB /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
+		947985EE1C04B5DA0053A7BB /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
+		947985F01C04B5F30053A7BB /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		947985F21C04C37F0053A7BB /* ProfileViewContainerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewContainerTableViewCell.h; sourceTree = "<group>"; };
+		947985F31C04C37F0053A7BB /* ProfileViewContainerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewContainerTableViewCell.m; sourceTree = "<group>"; };
+		947985F41C04C37F0053A7BB /* ProfileViewContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewContainerTableViewCell.xib; sourceTree = "<group>"; };
+		947985F71C0589A00053A7BB /* KvjW03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KvjW03.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		947985691C049B740053A7BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		947985821C049B740053A7BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479858D1C049B740053A7BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		947985631C049B740053A7BB = {
+			isa = PBXGroup;
+			children = (
+				9479856E1C049B740053A7BB /* PrallaxTableViewSample */,
+				947985881C049B740053A7BB /* PrallaxTableViewSampleTests */,
+				947985931C049B740053A7BB /* PrallaxTableViewSampleUITests */,
+				9479856D1C049B740053A7BB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9479856D1C049B740053A7BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9479856C1C049B740053A7BB /* PrallaxTableViewSample.app */,
+				947985851C049B740053A7BB /* PrallaxTableViewSampleTests.xctest */,
+				947985901C049B740053A7BB /* PrallaxTableViewSampleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9479856E1C049B740053A7BB /* PrallaxTableViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				947985721C049B740053A7BB /* AppDelegate.h */,
+				947985731C049B740053A7BB /* AppDelegate.m */,
+				947985801C049B740053A7BB /* Info.plist */,
+				9479856F1C049B740053A7BB /* Supporting Files */,
+				947985A71C049CE10053A7BB /* SlideViewController.h */,
+				947985A81C049CE10053A7BB /* SlideViewController.m */,
+				947985A91C049CE10053A7BB /* SlideViewController.xib */,
+				947985B11C049E0B0053A7BB /* Cell */,
+				947985B71C04A2240053A7BB /* ProfileTableViewController.h */,
+				947985B81C04A2240053A7BB /* ProfileTableViewController.m */,
+				947985B91C04A2240053A7BB /* ProfileTableViewController.xib */,
+				947985BC1C04A2E70053A7BB /* Images */,
+				947985ED1C04B5DA0053A7BB /* ProfileView.h */,
+				947985EE1C04B5DA0053A7BB /* ProfileView.m */,
+				947985F01C04B5F30053A7BB /* ProfileView.xib */,
+			);
+			path = PrallaxTableViewSample;
+			sourceTree = "<group>";
+		};
+		9479856F1C049B740053A7BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				947985701C049B740053A7BB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		947985881C049B740053A7BB /* PrallaxTableViewSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				947985891C049B740053A7BB /* PrallaxTableViewSampleTests.m */,
+				9479858B1C049B740053A7BB /* Info.plist */,
+			);
+			path = PrallaxTableViewSampleTests;
+			sourceTree = "<group>";
+		};
+		947985931C049B740053A7BB /* PrallaxTableViewSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				947985941C049B740053A7BB /* PrallaxTableViewSampleUITests.m */,
+				947985961C049B740053A7BB /* Info.plist */,
+			);
+			path = PrallaxTableViewSampleUITests;
+			sourceTree = "<group>";
+		};
+		947985B11C049E0B0053A7BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				947985B21C049E0B0053A7BB /* FriendTableViewCell.h */,
+				947985B31C049E0B0053A7BB /* FriendTableViewCell.m */,
+				947985B41C049E0B0053A7BB /* FriendTableViewCell.xib */,
+				947985F21C04C37F0053A7BB /* ProfileViewContainerTableViewCell.h */,
+				947985F31C04C37F0053A7BB /* ProfileViewContainerTableViewCell.m */,
+				947985F41C04C37F0053A7BB /* ProfileViewContainerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		947985BC1C04A2E70053A7BB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				947985BD1C04A2E70053A7BB /* loved.png */,
+				947985BE1C04A2E70053A7BB /* man1.jpg */,
+				947985BF1C04A2E70053A7BB /* man2.jpg */,
+				947985F71C0589A00053A7BB /* KvjW03.jpg */,
+				947985C01C04A2E70053A7BB /* man3.jpg */,
+				947985C11C04A2E70053A7BB /* man4.jpg */,
+				947985C21C04A2E70053A7BB /* man5.jpg */,
+				947985C31C04A2E70053A7BB /* man6.jpg */,
+				947985C41C04A2E70053A7BB /* man7.jpg */,
+				947985C51C04A2E70053A7BB /* man8.jpg */,
+				947985C61C04A2E70053A7BB /* mood1.jpg */,
+				947985C71C04A2E70053A7BB /* mood2.jpg */,
+				947985C81C04A2E70053A7BB /* mood3.jpg */,
+				947985C91C04A2E70053A7BB /* mood4.jpg */,
+				947985CA1C04A2E70053A7BB /* mood5.jpg */,
+				947985CB1C04A2E70053A7BB /* mood6.jpg */,
+				947985CC1C04A2E70053A7BB /* mood7.jpg */,
+				947985CD1C04A2E70053A7BB /* mood8.jpg */,
+				947985CE1C04A2E70053A7BB /* playful.png */,
+				947985CF1C04A2E70053A7BB /* relax.png */,
+				947985D01C04A2E70053A7BB /* woman1.jpg */,
+				947985D11C04A2E70053A7BB /* woman2.jpg */,
+				947985D21C04A2E70053A7BB /* woman3.jpg */,
+				947985D31C04A2E70053A7BB /* woman4.jpg */,
+				947985D41C04A2E70053A7BB /* woman5.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9479856B1C049B740053A7BB /* PrallaxTableViewSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 947985991C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSample" */;
+			buildPhases = (
+				947985681C049B740053A7BB /* Sources */,
+				947985691C049B740053A7BB /* Frameworks */,
+				9479856A1C049B740053A7BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrallaxTableViewSample;
+			productName = PrallaxTableViewSample;
+			productReference = 9479856C1C049B740053A7BB /* PrallaxTableViewSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		947985841C049B740053A7BB /* PrallaxTableViewSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9479859C1C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSampleTests" */;
+			buildPhases = (
+				947985811C049B740053A7BB /* Sources */,
+				947985821C049B740053A7BB /* Frameworks */,
+				947985831C049B740053A7BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				947985871C049B740053A7BB /* PBXTargetDependency */,
+			);
+			name = PrallaxTableViewSampleTests;
+			productName = PrallaxTableViewSampleTests;
+			productReference = 947985851C049B740053A7BB /* PrallaxTableViewSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9479858F1C049B740053A7BB /* PrallaxTableViewSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9479859F1C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSampleUITests" */;
+			buildPhases = (
+				9479858C1C049B740053A7BB /* Sources */,
+				9479858D1C049B740053A7BB /* Frameworks */,
+				9479858E1C049B740053A7BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				947985921C049B740053A7BB /* PBXTargetDependency */,
+			);
+			name = PrallaxTableViewSampleUITests;
+			productName = PrallaxTableViewSampleUITests;
+			productReference = 947985901C049B740053A7BB /* PrallaxTableViewSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		947985641C049B740053A7BB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = A12712;
+				TargetAttributes = {
+					9479856B1C049B740053A7BB = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					947985841C049B740053A7BB = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9479856B1C049B740053A7BB;
+					};
+					9479858F1C049B740053A7BB = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 9479856B1C049B740053A7BB;
+					};
+				};
+			};
+			buildConfigurationList = 947985671C049B740053A7BB /* Build configuration list for PBXProject "PrallaxTableViewSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 947985631C049B740053A7BB;
+			productRefGroup = 9479856D1C049B740053A7BB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9479856B1C049B740053A7BB /* PrallaxTableViewSample */,
+				947985841C049B740053A7BB /* PrallaxTableViewSampleTests */,
+				9479858F1C049B740053A7BB /* PrallaxTableViewSampleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9479856A1C049B740053A7BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947985E61C04A2E70053A7BB /* playful.png in Resources */,
+				947985AB1C049CE10053A7BB /* SlideViewController.xib in Resources */,
+				947985F61C04C37F0053A7BB /* ProfileViewContainerTableViewCell.xib in Resources */,
+				947985DF1C04A2E70053A7BB /* mood2.jpg in Resources */,
+				947985DB1C04A2E70053A7BB /* man6.jpg in Resources */,
+				947985EA1C04A2E70053A7BB /* woman3.jpg in Resources */,
+				947985EB1C04A2E70053A7BB /* woman4.jpg in Resources */,
+				947985E41C04A2E70053A7BB /* mood7.jpg in Resources */,
+				947985E91C04A2E70053A7BB /* woman2.jpg in Resources */,
+				947985D71C04A2E70053A7BB /* man2.jpg in Resources */,
+				947985D61C04A2E70053A7BB /* man1.jpg in Resources */,
+				947985B61C049E0B0053A7BB /* FriendTableViewCell.xib in Resources */,
+				947985F81C0589A00053A7BB /* KvjW03.jpg in Resources */,
+				947985DA1C04A2E70053A7BB /* man5.jpg in Resources */,
+				947985DC1C04A2E70053A7BB /* man7.jpg in Resources */,
+				947985DE1C04A2E70053A7BB /* mood1.jpg in Resources */,
+				947985DD1C04A2E70053A7BB /* man8.jpg in Resources */,
+				947985E81C04A2E70053A7BB /* woman1.jpg in Resources */,
+				947985F11C04B5F30053A7BB /* ProfileView.xib in Resources */,
+				947985E71C04A2E70053A7BB /* relax.png in Resources */,
+				947985E51C04A2E70053A7BB /* mood8.jpg in Resources */,
+				947985D51C04A2E70053A7BB /* loved.png in Resources */,
+				947985E31C04A2E70053A7BB /* mood6.jpg in Resources */,
+				947985E21C04A2E70053A7BB /* mood5.jpg in Resources */,
+				947985E11C04A2E70053A7BB /* mood4.jpg in Resources */,
+				947985E01C04A2E70053A7BB /* mood3.jpg in Resources */,
+				947985EC1C04A2E70053A7BB /* woman5.jpg in Resources */,
+				947985D81C04A2E70053A7BB /* man3.jpg in Resources */,
+				947985BB1C04A2240053A7BB /* ProfileTableViewController.xib in Resources */,
+				947985D91C04A2E70053A7BB /* man4.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		947985831C049B740053A7BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479858E1C049B740053A7BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		947985681C049B740053A7BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947985741C049B740053A7BB /* AppDelegate.m in Sources */,
+				947985F51C04C37F0053A7BB /* ProfileViewContainerTableViewCell.m in Sources */,
+				947985711C049B740053A7BB /* main.m in Sources */,
+				947985AA1C049CE10053A7BB /* SlideViewController.m in Sources */,
+				947985BA1C04A2240053A7BB /* ProfileTableViewController.m in Sources */,
+				947985EF1C04B5DA0053A7BB /* ProfileView.m in Sources */,
+				947985B51C049E0B0053A7BB /* FriendTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		947985811C049B740053A7BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9479858A1C049B740053A7BB /* PrallaxTableViewSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9479858C1C049B740053A7BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				947985951C049B740053A7BB /* PrallaxTableViewSampleUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		947985871C049B740053A7BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9479856B1C049B740053A7BB /* PrallaxTableViewSample */;
+			targetProxy = 947985861C049B740053A7BB /* PBXContainerItemProxy */;
+		};
+		947985921C049B740053A7BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9479856B1C049B740053A7BB /* PrallaxTableViewSample */;
+			targetProxy = 947985911C049B740053A7BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		947985971C049B740053A7BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		947985981C049B740053A7BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9479859A1C049B740053A7BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrallaxTableViewSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9479859B1C049B740053A7BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PrallaxTableViewSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9479859D1C049B740053A7BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrallaxTableViewSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrallaxTableViewSample.app/PrallaxTableViewSample";
+			};
+			name = Debug;
+		};
+		9479859E1C049B740053A7BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PrallaxTableViewSampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrallaxTableViewSample.app/PrallaxTableViewSample";
+			};
+			name = Release;
+		};
+		947985A01C049B740053A7BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrallaxTableViewSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PrallaxTableViewSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		947985A11C049B740053A7BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PrallaxTableViewSampleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = mine.PrallaxTableViewSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PrallaxTableViewSample;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		947985671C049B740053A7BB /* Build configuration list for PBXProject "PrallaxTableViewSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				947985971C049B740053A7BB /* Debug */,
+				947985981C049B740053A7BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		947985991C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9479859A1C049B740053A7BB /* Debug */,
+				9479859B1C049B740053A7BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9479859C1C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9479859D1C049B740053A7BB /* Debug */,
+				9479859E1C049B740053A7BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9479859F1C049B740053A7BB /* Build configuration list for PBXNativeTarget "PrallaxTableViewSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				947985A01C049B740053A7BB /* Debug */,
+				947985A11C049B740053A7BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 947985641C049B740053A7BB /* Project object */;
+}
