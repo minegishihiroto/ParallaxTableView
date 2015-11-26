@@ -18,9 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIView *tabContainerView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tabContainerViewBottomConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *profileContainerTopConstraint;
+@property (strong, nonatomic) UIScrollView *indicatorScrollView;
 
 
 + (ProfileView *)profileView;
+- (void)setUpIndicatorView;
 
 @end
 

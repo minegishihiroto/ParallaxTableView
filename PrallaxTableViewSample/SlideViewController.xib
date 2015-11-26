@@ -68,15 +68,15 @@
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAf-4n-RkV">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="377" id="gT4-et-530"/>
+                        <constraint firstAttribute="height" constant="379" id="gT4-et-530"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-hN-4Fm">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="126" id="jMM-J9-Val"/>
+                        <constraint firstAttribute="height" constant="128" id="jMM-J9-Val"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGo-KF-tMY">
@@ -87,7 +87,6 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="pqo-OY-Rdm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1LL-8O-5Pi"/>
                 <constraint firstItem="KAf-4n-RkV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BwB-dC-ebD"/>

@@ -18,8 +18,8 @@
 
 @implementation SlideViewController
 
-static CGFloat const kFireDistance = 126.0f;
-static CGFloat const kProfileViewHeight = 377.0f;
+static CGFloat const kFireDistance = 128.0f;
+static CGFloat const kProfileViewHeight = 379.0f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,10 +62,15 @@ static CGFloat const kProfileViewHeight = 377.0f;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.profileView setUpIndicatorView];
 }
 
 - (NSUInteger)currentIndex {
     return ((NSInteger)self.scrollView.contentOffset.x + 1) / (NSInteger)self.view.bounds.size.width;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -146,8 +151,18 @@ static CGFloat const kProfileViewHeight = 377.0f;
 
 - (void)setProfilViewWithTableViewController:(ProfileTableViewController *)viewController scrollView:(UIScrollView *)scrollView {
     if (self.profileView.superview.superview == viewController.profileViewContainerTableViewCell) {
+        if (scrollView.contentOffset.y < 0) {
+            CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, 315);
+            CGFloat delta = fabs(MIN(0.0f, scrollView.contentOffset.y));
+            CGRect coverImageFrame = self.profileView.coverImageView.frame;
+            coverImageFrame.origin.x = CGRectGetMinX(rect) - delta/2;
+            coverImageFrame.origin.y = CGRectGetMinY(rect) - delta;
+            coverImageFrame.size.width = CGRectGetWidth(rect) + delta;
+            coverImageFrame.size.height = CGRectGetHeight(rect) + delta;
+            self.profileView.coverImageView.frame = coverImageFrame;
+        }
         // スクロールがヘッダの固定位置に達した時
-        if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
+        else if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
             [self.profileView layoutIfNeeded];
             CGRect profileViewFrame = self.profileView.frame;
             profileViewFrame.size.height = kProfileViewHeight - (scrollView.contentOffset.y);
@@ -156,9 +171,10 @@ static CGFloat const kProfileViewHeight = 377.0f;
             
             self.profileView.profileContainerTopConstraint.constant = - (scrollView.contentOffset.y  * 0.5);
             [self.profileView layoutIfNeeded];
-            //NSLog(@"セル内で動いてる");
+            NSLog(@"セル内で動いてる");
         }
         else if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
+            
             CGRect profileViewFrame = self.profileView.frame;
             profileViewFrame.origin.y = 0.0f;
             profileViewFrame.size.height = kFireDistance;
@@ -172,7 +188,7 @@ static CGFloat const kProfileViewHeight = 377.0f;
     else if (self.profileView.superview == self.fixedHeaderView) {
         // スクロールがヘッダの固定位置より小さくなった時
         if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
-            //NSLog(@"ヘッダ内で動いてる");
+            NSLog(@"ヘッダ内で動いてる");
         }
         else if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
             [self.profileView layoutIfNeeded];

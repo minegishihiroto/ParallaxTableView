@@ -13,7 +13,6 @@
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ej-U5-2SC">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="379"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sth-s5-rLd">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="315"/>
@@ -24,7 +23,7 @@
                                 <constraint firstAttribute="height" constant="315" id="bSQ-oO-Yj8"/>
                             </constraints>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVD-cf-a0g">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVD-cf-a0g">
                             <rect key="frame" x="142" y="243" width="90" height="30"/>
                             <state key="normal" title="フォローする">
                                 <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,10 +33,13 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="8Oh-YM-aKz" secondAttribute="trailing" id="IKD-AL-urf"/>
+                        <constraint firstAttribute="bottom" secondItem="FVD-cf-a0g" secondAttribute="bottom" constant="42" id="T4v-6P-Mj1"/>
                         <constraint firstAttribute="height" constant="315" id="VHZ-mG-zEh"/>
+                        <constraint firstItem="FVD-cf-a0g" firstAttribute="top" secondItem="sth-s5-rLd" secondAttribute="top" constant="243" id="WiR-Ji-ZDC"/>
+                        <constraint firstItem="FVD-cf-a0g" firstAttribute="centerX" secondItem="sth-s5-rLd" secondAttribute="centerX" id="YzF-Ko-wtX"/>
                         <constraint firstItem="8Oh-YM-aKz" firstAttribute="top" secondItem="sth-s5-rLd" secondAttribute="top" id="o4c-V7-n4E"/>
                         <constraint firstItem="8Oh-YM-aKz" firstAttribute="leading" secondItem="sth-s5-rLd" secondAttribute="leading" id="rvq-zc-9pN"/>
                         <constraint firstAttribute="bottom" secondItem="8Oh-YM-aKz" secondAttribute="bottom" id="xi9-6S-Bn4"/>
@@ -46,11 +48,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Euq-Df-bML">
                     <rect key="frame" x="0.0" y="315" width="375" height="64"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r51-0a-5sr">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r51-0a-5sr">
                             <rect key="frame" x="0.0" y="0.0" width="125" height="62"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="62" id="LDN-6E-51f"/>
-                            </constraints>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="トーク">
@@ -60,11 +60,9 @@
                                 <action selector="didTapTalkTabButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="sFY-XB-BWI"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMh-ND-z93">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NMh-ND-z93">
                             <rect key="frame" x="125" y="0.0" width="125" height="62"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="62" id="BxM-h1-Yof"/>
-                            </constraints>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="フォロワー">
@@ -74,11 +72,9 @@
                                 <action selector="didTapFollowerTabButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="jeP-qT-Ygm"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp9-ul-1r3">
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cp9-ul-1r3">
                             <rect key="frame" x="250" y="0.0" width="125" height="62"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="62" id="h5N-mx-O1e"/>
-                            </constraints>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <inset key="contentEdgeInsets" minX="0.0" minY="-15" maxX="0.0" maxY="0.0"/>
                             <state key="normal" title="フォロー">
                                 <color key="titleColor" red="0.98431372549019602" green="0.29803921568627451" blue="0.25882352941176473" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,23 +83,18 @@
                                 <action selector="didTapFollowTabButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="GGj-Jc-XTt"/>
                             </connections>
                         </button>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQg-sk-Pxr">
+                            <rect key="frame" x="0.0" y="62" width="375" height="2"/>
+                            <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        </scrollView>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="NMh-ND-z93" firstAttribute="leading" secondItem="r51-0a-5sr" secondAttribute="trailing" id="0CR-va-IcK"/>
-                        <constraint firstItem="NMh-ND-z93" firstAttribute="width" secondItem="r51-0a-5sr" secondAttribute="width" id="0pn-xa-l5e"/>
-                        <constraint firstItem="r51-0a-5sr" firstAttribute="top" secondItem="Euq-Df-bML" secondAttribute="top" id="9be-Gk-Tzu"/>
-                        <constraint firstItem="cp9-ul-1r3" firstAttribute="top" secondItem="Euq-Df-bML" secondAttribute="top" id="AaW-md-1DX"/>
-                        <constraint firstItem="cp9-ul-1r3" firstAttribute="width" secondItem="r51-0a-5sr" secondAttribute="width" id="DMY-Uq-hKc"/>
-                        <constraint firstItem="cp9-ul-1r3" firstAttribute="leading" secondItem="NMh-ND-z93" secondAttribute="trailing" id="LaZ-HY-khT"/>
-                        <constraint firstAttribute="trailing" secondItem="cp9-ul-1r3" secondAttribute="trailing" id="MQb-cq-j4h"/>
-                        <constraint firstItem="NMh-ND-z93" firstAttribute="top" secondItem="Euq-Df-bML" secondAttribute="top" id="WR8-jh-vcQ"/>
-                        <constraint firstItem="r51-0a-5sr" firstAttribute="leading" secondItem="Euq-Df-bML" secondAttribute="leading" id="mXY-ZP-snC"/>
-                        <constraint firstAttribute="height" constant="64" id="n6M-6v-d8Y"/>
-                        <constraint firstItem="NMh-ND-z93" firstAttribute="leading" secondItem="r51-0a-5sr" secondAttribute="trailing" id="xUi-XR-iSS"/>
+                        <constraint firstAttribute="height" constant="64" id="MVb-RV-tWK"/>
                     </constraints>
                 </view>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Euq-Df-bML" secondAttribute="trailing" id="25B-hb-GPw"/>
                 <constraint firstItem="Euq-Df-bML" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="3eC-ia-bmj"/>
