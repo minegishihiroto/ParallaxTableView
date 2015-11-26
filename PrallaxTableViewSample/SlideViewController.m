@@ -70,7 +70,9 @@ static CGFloat const kProfileViewHeight = 379.0f;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+    CGPoint offset = scrollView.contentOffset;
+    offset.x = - (offset.x / 3);
+    [self.profileView.indicatorScrollView setContentOffset:offset animated:NO];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -171,7 +173,7 @@ static CGFloat const kProfileViewHeight = 379.0f;
             
             self.profileView.profileContainerTopConstraint.constant = - (scrollView.contentOffset.y  * 0.5);
             [self.profileView layoutIfNeeded];
-            NSLog(@"セル内で動いてる");
+            //NSLog(@"セル内で動いてる");
         }
         else if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
             
@@ -182,13 +184,13 @@ static CGFloat const kProfileViewHeight = 379.0f;
             
             [self.profileView removeFromSuperview];
             [self.fixedHeaderView addSubview:self.profileView];
-            NSLog(@"ヘッダに入れる");
+//            NSLog(@"ヘッダに入れる");
         }
     }
     else if (self.profileView.superview == self.fixedHeaderView) {
         // スクロールがヘッダの固定位置より小さくなった時
         if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
-            NSLog(@"ヘッダ内で動いてる");
+           // NSLog(@"ヘッダ内で動いてる");
         }
         else if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
             [self.profileView layoutIfNeeded];
@@ -202,11 +204,11 @@ static CGFloat const kProfileViewHeight = 379.0f;
             
             [self.profileView removeFromSuperview];
             [viewController.profileViewContainerTableViewCell addProfileView:self.profileView];
-            NSLog(@"セルに入れる");
+           // NSLog(@"セルに入れる");
         }
     } else if (self.profileView.superview == self.fixedContentsView) {
         
-        NSLog(@"ありえないはず");
+       // NSLog(@"ありえないはず");
         [self removeProfiliViewFromContentView];
     }
 }

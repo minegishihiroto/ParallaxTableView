@@ -23,9 +23,8 @@
     self.indicatorScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 62, viewWidth, 2)];
     self.indicatorScrollView.backgroundColor = [UIColor clearColor];
     self.indicatorScrollView.contentOffset = CGPointMake(0, 0);
-    self.indicatorScrollView.contentSize = CGSizeMake(viewWidth * 5, 0);
+    self.indicatorScrollView.contentSize = CGSizeMake(viewWidth, 0);
     [self.tabContainerView addSubview:self.indicatorScrollView];
-    
     
     for (int i = 0; i < 3; i ++) {
         UIView *indicatorBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(i * (viewWidth / 3), 0, viewWidth / 3, 2)];
@@ -36,6 +35,7 @@
     }
     
 }
+
 - (IBAction)didTapFollowButton:(id)sender {
     NSLog(@"フォローする!!!");
 }
