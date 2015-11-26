@@ -9,7 +9,7 @@
 #import "SlideViewController.h"
 #import "ProfileTableViewController.h"
 
-@interface SlideViewController () <UIScrollViewDelegate, ProfileTableViewControllerDelegatge>
+@interface SlideViewController () <UIScrollViewDelegate, ProfileTableViewControllerDelegatge, ProfileViewDelegate>
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *containerViews;
 @property (copy, nonatomic) NSArray<ProfileTableViewController *> *viewContollers;
 @property (strong, nonatomic) ProfileView *profileView;
@@ -23,7 +23,6 @@ static CGFloat const kProfileViewHeight = 377.0f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     self.navigationView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.4];
     
     CGFloat width = self.view.bounds.size.width;
@@ -48,10 +47,11 @@ static CGFloat const kProfileViewHeight = 377.0f;
     self.viewContollers = array;
     self.fixedContentsView.clipsToBounds = YES;
     self.fixedHeaderView.clipsToBounds = YES;
+    
     self.profileView = [ProfileView profileView];
+    self.profileView.delegate = self;
     self.profileView.clipsToBounds = YES;
-    self.profileView.tag = 10000;
-
+    
     self.fixedContentsView.hidden = YES;
 }
 
@@ -60,11 +60,23 @@ static CGFloat const kProfileViewHeight = 377.0f;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+}
+
 - (NSUInteger)currentIndex {
     return ((NSInteger)self.scrollView.contentOffset.x + 1) / (NSInteger)self.view.bounds.size.width;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self addProfileViewToContentView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self removeProfiliViewFromContentView];
+}
+
+- (void)addProfileViewToContentView {
     if (self.profileView.superview == self.fixedHeaderView) {
         // header
     }
@@ -80,11 +92,11 @@ static CGFloat const kProfileViewHeight = 377.0f;
         self.profileView.frame = frame;
         
         [self.fixedContentsView addSubview:self.profileView];
-        self.fixedContentsView.hidden = NO;
+        self.fixedContentsView.hidden =  NO;
     }
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)removeProfiliViewFromContentView {
     if (self.profileView.superview == self.fixedHeaderView) {
         //　header
     }
@@ -106,17 +118,64 @@ static CGFloat const kProfileViewHeight = 377.0f;
 
 - (void)profileTableViewController:(ProfileTableViewController *)viewController tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath cell:(UITableViewCell *)cell {
     
-    ProfileViewContainerTableViewCell *profileViewContainerTableViewCell =(ProfileViewContainerTableViewCell *)cell;
-    
-    [self.profileView removeFromSuperview];
-    [profileViewContainerTableViewCell addProfileView:self.profileView];
+    if (self.viewContollers[self.currentIndex] != viewController) {
+        return;
+    }
+
+    if (tableView.contentOffset.y < kProfileViewHeight - kFireDistance) {
+        ProfileViewContainerTableViewCell *profileViewContainerTableViewCell =(ProfileViewContainerTableViewCell *)cell;
+        [self.profileView removeFromSuperview];
+        [profileViewContainerTableViewCell addProfileView:self.profileView];
+    }
 }
 
 - (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewDidScroll:(UIScrollView *)scrollView {
-    if (self.profileView.superview == self.fixedHeaderView) {
-        // スクロールがヘッダの固定位置より小さくなった時
+    [self setProfilViewWithTableViewController:viewController scrollView:scrollView];
+}
+
+- (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+}
+
+- (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self setContentOffsetWithTableViewController:viewController scrollView:scrollView];
+}
+
+- (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self setContentOffsetWithTableViewController:viewController scrollView:scrollView];
+}
+
+- (void)setProfilViewWithTableViewController:(ProfileTableViewController *)viewController scrollView:(UIScrollView *)scrollView {
+    if (self.profileView.superview.superview == viewController.profileViewContainerTableViewCell) {
+        // スクロールがヘッダの固定位置に達した時
         if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
-            // profileView in tableview　cell
+            [self.profileView layoutIfNeeded];
+            CGRect profileViewFrame = self.profileView.frame;
+            profileViewFrame.size.height = kProfileViewHeight - (scrollView.contentOffset.y);
+            profileViewFrame.origin.y = (scrollView.contentOffset.y);
+            self.profileView.frame = profileViewFrame;
+            
+            self.profileView.profileContainerTopConstraint.constant = - (scrollView.contentOffset.y  * 0.5);
+            [self.profileView layoutIfNeeded];
+            //NSLog(@"セル内で動いてる");
+        }
+        else if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
+            CGRect profileViewFrame = self.profileView.frame;
+            profileViewFrame.origin.y = 0.0f;
+            profileViewFrame.size.height = kFireDistance;
+            self.profileView.frame = profileViewFrame;
+            
+            [self.profileView removeFromSuperview];
+            [self.fixedHeaderView addSubview:self.profileView];
+            NSLog(@"ヘッダに入れる");
+        }
+    }
+    else if (self.profileView.superview == self.fixedHeaderView) {
+        // スクロールがヘッダの固定位置より小さくなった時
+        if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
+            //NSLog(@"ヘッダ内で動いてる");
+        }
+        else if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
+            [self.profileView layoutIfNeeded];
             CGRect profileViewFrame = self.profileView.frame;
             profileViewFrame.size.height = kProfileViewHeight - (scrollView.contentOffset.y);
             profileViewFrame.origin.y = (scrollView.contentOffset.y);
@@ -128,49 +187,14 @@ static CGFloat const kProfileViewHeight = 377.0f;
             [self.profileView removeFromSuperview];
             [viewController.profileViewContainerTableViewCell addProfileView:self.profileView];
             NSLog(@"セルに入れる");
-        } else {
-           // NSLog(@"ヘッダ内で動いてる");
         }
     } else if (self.profileView.superview == self.fixedContentsView) {
         
         NSLog(@"ありえないはず");
-    }
-    else {
-        // スクロールがヘッダの固定位置に達した時
-        if (scrollView.contentOffset.y < kProfileViewHeight - kFireDistance) {
-            // profileView in tableview　cell
-            CGRect profileViewFrame = self.profileView.frame;
-            profileViewFrame.size.height = kProfileViewHeight - (scrollView.contentOffset.y);
-            profileViewFrame.origin.y = (scrollView.contentOffset.y);
-            self.profileView.frame = profileViewFrame;
-            
-            self.profileView.profileContainerTopConstraint.constant = - (scrollView.contentOffset.y  * 0.5);
-            [self.profileView layoutIfNeeded];
-             NSLog(@"セル内で動いてる");
-        } else {
-            CGRect frame = self.profileView.frame;
-            frame.origin.y = 0.0f;
-            self.profileView.frame = frame;
-            
-            [self.profileView removeFromSuperview];
-            [self.fixedHeaderView addSubview:self.profileView];
-            NSLog(@"ヘッダに入れる");
-            
-        }
-    }
-    
-    if ([self.profileView.superview.superview isMemberOfClass:[self class]]) {
-        
+        [self removeProfiliViewFromContentView];
     }
 }
-
-- (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    [self setContentOffsetWithTableViewController:viewController scrollView:scrollView];
-}
-
-- (void)profileTableViewController:(ProfileTableViewController *)viewController scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    [self setContentOffsetWithTableViewController:viewController scrollView:scrollView];
-}
+                            
 
 - (void)setContentOffsetWithTableViewController:(ProfileTableViewController *)viewController scrollView:(UIScrollView *)scrollView {
     if (self.viewContollers[self.currentIndex] != viewController) {
@@ -181,8 +205,34 @@ static CGFloat const kProfileViewHeight = 377.0f;
         if (viewController.tableView == scrollView) {
             continue;
         }
-        [viewController.tableView setContentOffset:scrollView.contentOffset animated:NO];
+        CGPoint newOffset = scrollView.contentOffset;
+        if (scrollView.contentOffset.y > kProfileViewHeight - kFireDistance) {
+            NSLog(@"scrollview offset:%f", scrollView.contentOffset.y);
+            newOffset.y = kProfileViewHeight - kFireDistance;
+            
+        }
+        [viewController.tableView setContentOffset:newOffset animated:NO];
     }
+}
+
+#pragma mark ProfileViewDelegate
+- (void)profileView:(ProfileView *)view didTapFollowButton:(UIButton *)button {
+    
+}
+- (void)profileView:(ProfileView *)view didTapTalkTabButton:(UIButton *)button {
+    [self addProfileViewToContentView];
+    CGPoint offset = CGPointMake(0, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+- (void)profileView:(ProfileView *)view didTapFollowerTabButton:(UIButton *)button {
+    [self addProfileViewToContentView];
+    CGPoint offset = CGPointMake(self.view.bounds.size.width, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
+}
+- (void)profileView:(ProfileView *)view didTapFollowTabButton:(UIButton *)button {
+    [self addProfileViewToContentView];
+    CGPoint offset = CGPointMake(self.view.bounds.size.width * 2, 0);
+    [self.scrollView setContentOffset:offset animated:YES];
 }
 
 @end

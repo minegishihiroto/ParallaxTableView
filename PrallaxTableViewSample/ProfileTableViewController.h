@@ -24,6 +24,8 @@
 
 - (void)profileTableViewController: (ProfileTableViewController *)viewController scrollViewDidScroll:(UIScrollView *)scrollView;
 
+- (void)profileTableViewController: (ProfileTableViewController *)viewController scrollViewWillBeginDragging:(UIScrollView *)scrollView;
+
 - (void)profileTableViewController: (ProfileTableViewController *)viewController scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
 
 - (void)profileTableViewController: (ProfileTableViewController *)viewController scrollViewDidEndDecelerating:(UIScrollView *)scrollView;

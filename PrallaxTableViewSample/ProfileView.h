@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol ProfileViewDelegate;
 @interface ProfileView : UIView
+
+@property (weak, nonatomic) id<ProfileViewDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UIView *profileContainerView;
 @property (weak, nonatomic) IBOutlet UIImageView *coverImageView;
@@ -18,5 +21,14 @@
 
 
 + (ProfileView *)profileView;
+
+@end
+
+@protocol ProfileViewDelegate <NSObject>
+
+- (void)profileView:(ProfileView *)view didTapFollowButton:(UIButton *)button;
+- (void)profileView:(ProfileView *)view didTapTalkTabButton:(UIButton *)button;
+- (void)profileView:(ProfileView *)view didTapFollowerTabButton:(UIButton *)button;
+- (void)profileView:(ProfileView *)view didTapFollowTabButton:(UIButton *)button;
 
 @end

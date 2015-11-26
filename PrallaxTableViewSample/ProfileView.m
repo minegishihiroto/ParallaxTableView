@@ -22,4 +22,18 @@
     NSLog(@"フォローする!!!");
 }
 
+- (IBAction)didTapTalkTabButton:(id)sender {
+    UIButton *button = sender;
+    [self.delegate profileView:self didTapTalkTabButton:button];
+}
+
+- (IBAction)didTapFollowerTabButton:(id)sender {
+    UIButton *button = sender;
+    [self.delegate profileView:self didTapFollowerTabButton:button];
+}
+
+- (IBAction)didTapFollowTabButton:(id)sender {
+    UIButton *button = sender;
+    [self.delegate profileView:self didTapFollowTabButton:button];
+}
 @end

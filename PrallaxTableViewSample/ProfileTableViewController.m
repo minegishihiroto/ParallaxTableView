@@ -75,9 +75,12 @@
     }
     return 64.0;
 }
-
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [self.delegate profileTableViewController:self scrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self.delegate profileTableViewController:self scrollViewWillBeginDragging:scrollView];
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {

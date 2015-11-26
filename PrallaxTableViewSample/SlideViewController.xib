@@ -67,17 +67,16 @@
                         <constraint firstAttribute="bottom" secondItem="SMF-EK-sL4" secondAttribute="bottom" id="ZqN-XK-kCs"/>
                     </constraints>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAf-4n-RkV">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="377" id="gT4-et-530"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQc-hN-4Fm">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="126"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="126" id="jMM-J9-Val"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAf-4n-RkV">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="377"/>
-                    <color key="backgroundColor" red="0.92941176469999998" green="0.19215686269999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="377" id="gT4-et-530"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JGo-KF-tMY">
